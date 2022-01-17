@@ -1,0 +1,12 @@
+.DS_Store
+# Thumbs.db
+# db.json
+*.log
+
+.deploy*/
+
+.deploy_git/
+.git/
+
+node_modules/
+public/

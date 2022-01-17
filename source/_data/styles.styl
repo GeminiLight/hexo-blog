@@ -1,0 +1,489 @@
+@import "custom.styl";
+@import "shadow.styl";
+@import "position.styl";
+@import "icons.styl";
+@import "tags.styl";
+
+
+// sidebar-inner
+// --------------------------------------------------
+.sidebar-inner {
+  border-radius: 5px;
+
+  .site-author-image {
+    border-radius: 50%   
+  }
+
+  .site-author-name {
+    color: $purple-light
+    font-family: "Noto Serif SC"
+  }
+  
+  .exturl {
+    border-bottom: 0px;
+    // background-color: $blue;
+  }
+  .links-of-author {
+    a {
+      border: 1px solid #fff
+      &:hover {
+        background-color: #fff
+        border: 1px solid $blue-light
+      }
+    }
+  }
+  ul {
+    // text-align: center
+    display: flex;
+    justify-content: center;
+
+    .links-of-blogroll-item {
+      width 80%
+      border: 1px solid #eee
+      border-radius 20px
+
+      &:hover {
+        border: 1px solid $blue-light
+        background #fff
+        a {
+          color: $blue-light
+        }
+      }
+    }
+
+  }
+
+  //   .fa {
+  // color: $blue;
+  // }
+
+  // .fab {
+  // color: $blue;
+  // }
+}
+
+
+// header-inner
+// --------------------------------------------------
+.header-inner {
+  border-radius: 0 0 $radius $radius;
+   background-color #fff
+  .site-brand-container {
+     border-radius: 0 0 $radius $radius;
+
+   }
+  nav {
+        ul {
+        text-align: justify
+        overflow: hidden
+        padding: 7.5% 15%
+
+        .menu-item {
+          margin 3px
+          padding: 0
+          a {
+            border-radius: 20px
+          }
+        }
+        li{
+            list-style: none
+            text-align: right 
+            float: right;
+            width: 75%;
+            background: #fff
+            border-radius: 20px
+            border: 1px solid #eee;
+            display inline-block
+            box-shadow:0 1px 1px rgba(0,0,0,0.05),0 2px 2px rgba(0,0,0,0.05),0 3px 3px rgba(0,0,0,0.05),0 4px 4px rgba(0,0,0,0.05)
+        }
+        li:nth-child(2n+1){
+            float: left ;
+        }
+      }
+  }
+
+  .menu-item a:hover, .menu-item span.exturl:hover, .menu-item a.menu-item-active, .menu-item span.exturl.menu-item-active {
+      background-color: #fff
+      color: $orange-light
+      border: $orange-light;
+      border-radius: 20px
+      font-size:14px
+  }
+  .menu-item-active::after {
+    background: $orange-light
+  }
+
+  // .fa {
+  // color: $blue;
+  // }
+
+  // .fab {
+  // color: $blue;
+  // }
+}
+
+.pagination {
+  border-radius: $radius;
+}
+
+.main-inner{
+  // for circle
+  .post-block {
+    border-radius: $radius;
+  }
+
+  // article href
+  article a {
+    color: $purple-blue
+    border-bottom: 0
+    &:hover {
+      color: $purple-light
+    }
+  }
+  h2 a {
+    color: $blue
+    border-bottom: 0
+    &:hover {
+      color: $blue-light
+    }
+  }
+
+  .post-button a {
+    &:hover {
+      color: #ffffff;
+      background: $blue;
+      border-color: $blue
+    }
+  }
+}
+
+// 首页阅读全文样式
+.post-button {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.post-button .btn {
+    margin: 0 4px 8px 4px;
+    padding: 0 20px;
+    color: $blue;
+    border: 2px $blue solid;
+    font-size: 15px;
+    border-radius: 16px;
+    line-height: 2;
+}
+
+.post-title-link{
+
+}
+
+// archive
+.collection-header {
+  color: $blue-light
+}
+
+.posts-collapse::before {
+  background $blue-bright  
+}
+
+.posts-collapse .collection-title::before {
+  background $blue-light  
+}
+
+.posts-collapse .collection-year::before {
+  background $blue-light
+}
+
+.posts-collapse .post-header::before {
+  background $blue-light
+}
+
+.posts-collapse .post-header:hover::before {
+  background $purple-light
+}
+
+// Body Section
+// --------------------------------------------------
+// background
+body {
+  // e1f5ff
+  background: #ffffff url(../images/bg-3.webp) no-repeat
+  background-size: cover
+  background-attachment: fixed
+  background-position: top
+}
+
+.main-inner .post-block {
+  // opacity: 0.95;
+  background:rgba(255, 255, 255, 0.95)
+}
+
+// Header Section
+// --------------------------------------------------
+// site-brand-container
+.site-brand-container {
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+.site-title {
+  color: $orange;
+}
+
+.site-subtitle {
+  color: $pink-light; // $orange-light
+}
+
+// Category
+// --------------------------------------------------
+.category-all-page {
+  .category-all-title {
+    text-align: center;
+  }
+
+  .category-all {
+    margin-top: 20px;
+  }
+
+  .category-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .category-list-item {
+    border-radius $radius
+    margin: 15px  20px;
+    padding: 20px 20px 20px 30px;
+    height: 40px;
+    line-height: 40px;
+    width: 40%;
+    max-width: 280px;
+    min-width: 200px;
+
+    text-align: left 
+    display inline-block
+
+    background: $lavender;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07),0 2px 4px rgba(0,0,0,0.07),0 4px 8px rgba(0,0,0,0.07),0 8px 16px rgba(0,0,0,0.07),0 16px 32px rgba(0,0,0,0.07),0 32px 64px rgba(0,0,0,0.07)
+
+  }
+
+  .category-list-count {
+      display: block;
+      position relative
+
+      float right 
+      height: 30px;
+      width: 50px;
+      line-height: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 20px;
+      text-align: center 
+      color: $orange;
+      background: $blue-bright;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.07),0 2px 4px rgba(0,0,0,0.07),0 4px 8px rgba(0,0,0,0.07),0 8px 16px rgba(0,0,0,0.07),0 16px 32px rgba(0,0,0,0.07),0 32px 64px rgba(0,0,0,0.07)
+      &:before {
+        content: '';
+      }
+
+      &:after {
+        content: '';
+      }
+  }
+
+  .category-list-child {
+    padding-left: 10px;
+  }
+}
+.category-list-link {
+  border-bottom: 0
+}
+
+// Post
+// --------------------------------------------------
+
+/* post-标签选择卡片加粗 */
+.post-body .tabs ul.nav-tabs li.tab a {
+  font-weight: bold;
+}
+
+/* post-超链接 */
+.post-body a {
+  border-bottom-color: $grey-light;
+
+  &:hover {
+    border-bottom-color: var(--link-hover-color);
+  }
+}
+
+.post-block {
+  // background: #c2e9fb;
+}
+
+
+// copyright
+.post-copyright {
+  border-left: 3px solid $orange-bright 
+  background-color: $purple-little
+  .fa {
+    color: $orange-light;
+  }
+}
+
+figcaption {
+  text-align: center
+}
+
+// code highlight
+.highlight {
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+code, kbd, .highlight, pre {
+  background: rgba(248, 248, 248, 1)
+}
+
+// 标题加编号
+// --------------------------------------------------
+// 加上.post-body，只应用于各文章页面，主页、tag、archive这三面页面不出现自动编号
+.post-body {
+  h1, h2, h3, h4, h5, h6 {
+    a {
+      color: $blue;
+      border-bottom: 0;
+      &:hover {
+        color: $blue-light;
+      }
+    }
+  }
+  counter-reset: h2;
+  h1 {
+    counter-reset: h2;
+  }
+
+  h2 {
+    counter-reset: h3;
+    border-bottom: 0
+    // border-left: 2px solid #000
+  }
+
+  h3 {
+    counter-reset: h4;
+    border-bottom: 0
+  }
+
+  h4 {
+    counter-reset: h5;
+  }
+
+  h5 {
+    counter-reset: h6;
+  }
+
+
+  h2:before {
+    counter-increment: h2;
+    content: counter(h2) '. ';
+  }
+
+  h3:before {
+    counter-increment: h3;
+    content: counter(h2) '.' counter(h3) '. ';
+  }
+
+  h4:before {
+    counter-increment: h4;
+    content: counter(h2) '.' counter(h3) '.' counter(h4) '. ';
+  }
+
+  h5:before {
+    counter-increment: h5;
+    content: counter(h2) '.' counter(h3) '.' counter(h4) '.' counter(h5) '. ';
+  }
+
+  h6:before {
+    counter-increment: h6;
+    content: counter(h2) '.' counter(h3) '.' counter(h4) '.' counter(h5) '.' counter(h6) '. ';
+  }
+}
+
+.nav {
+  counter-reset: h2;
+  .nav-item.nav-level-1 {
+    counter-reset: h2;
+  }
+
+  .nav-item.nav-level-2 {
+    counter-reset: h3;
+  }
+
+  .nav-item.nav-level-3 {
+    counter-reset: h4;
+  }
+
+  .nav-item.nav-level-4 {
+    counter-reset: h5;
+  }
+
+  .nav-item.nav-level-5 {
+    counter-reset: h6;
+  }
+
+  .nav-item.nav-level-2 a span:before {
+    counter-increment: h2;
+    content: counter(h2) '. ';
+  }
+
+  .nav-item.nav-level-3 a span:before {
+    counter-increment: h3;
+    content: counter(h2) '.' counter(h3) '. ';
+  }
+
+   .nav-item.nav-level-4 a span:before {
+    counter-increment: h4;
+    content: counter(h2) '.' counter(h3) '.' counter(h4) '. ';
+  }
+
+  .nav-item.nav-level-5 a span:before {
+    counter-increment: h5;
+    content: counter(h2) '.' counter(h3) '.' counter(h4) '.' counter(h5) '. ';
+  }
+
+  .nav-item.nav-level-6 a span:before {
+    counter-increment: h6;
+    content: counter(h2) '.' counter(h3) '.' counter(h4) '.' counter(h5) '.' counter(h6) '. ';
+  }
+}
+
+// 标题颜色
+// --------------------------------------------------
+h1, .post-body h2, .post-body h3, .post-body h4, .post-body h5, .post-body h6 {
+    // border-bottom: 0px solid #ffffff
+    color: $blue
+}
+
+.posts-expand .post-title-link {
+  color: $blue
+
+  &:before {
+    background $blue
+  }
+}
+
+
+// back
+.back-to-top {
+  // color $blue
+  background $purple-light 
+  border-radius 50%
+  box-shadow:0 1px 1px rgba(0,0,0,0.15),0 2px 2px rgba(0,0,0,0.15),0 4px 4px rgba(0,0,0,0.15),0 8px 8px rgba(0,0,0,0.15)
+
+  &:hover {
+    color #fff
+    background $avater-color 
+  }
+
+}
+

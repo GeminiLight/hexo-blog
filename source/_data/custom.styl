@@ -1,0 +1,75 @@
+// shared-resource
+// --------------------------------------------------
+.shared-resource-div {
+    background: $lavender;
+    border-radius: 50px;
+    padding: 10px 20px;
+    color: $orange;
+    
+    &:hover {
+        box-shadow:0 1px 1px rgba(0,0,0,0.15),0 2px 2px rgba(0,0,0,0.15),0 4px 4px rgba(0,0,0,0.15),0 8px 8px rgba(0,0,0,0.15)
+    }
+}
+
+.shared-resource-btn-div {
+    // float:right;
+}
+
+// about-hobits-label
+// --------------------------------------------------
+.hobits-label {
+    height: 30px;
+    line-height: 30px;
+    width: 100px;
+    border-radius: 20px;
+
+    background: $blue;
+    color: #123456;
+}
+
+// about-number-special-effect
+// --------------------------------------------------
+.wrapper{
+    padding: 50px;
+    background: $avater-color;
+    // width: cal(100%-50px);
+    height: 100%;
+    min-height: 500px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.text {
+    // position
+    flex: 0 0 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    // font
+    font-size: 5rem;
+    font-weight: 900;
+    color: #00000000;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    // border
+    // border-bottom: 1px solid #d4d7ff;
+    // border-top: 1px solid #d4d7ff;
+    // background
+    background: url(../../images/effects/source.gif);
+    background-clip: text;
+    -webkit-background-clip: text;
+    // after
+    &:after {
+        content: attr(data-text);
+        -webkit-text-stroke: 1.5px $orange-bright;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -49%);
+        background: url(./img/source.gif);
+        background-clip: text;
+        -webkit-background-clip: text;
+        background-size: 43%;
+    }
+}
